@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+body {
+  background: rgba(156, 190, 252, 0.863);
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+.title img {
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  border-radius: 50%;
+}
+.title h1 {
+  font-size: 25px;
+  font-weight: 500;
+}
+.cube {
+  margin: 8rem auto 0;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  /* transform: rotateY(30deg) rotateZ(30deg); */
+  animation: spin 51s infinite linear;
+}
+.side {
+  position: absolute;
+  opacity: 0.8;
+  width: 300px;
+  height: 300px;
+}
+#front {
+  background: url(./media/basic-pics/10.JPG) no-repeat center/cover;
+  transform: translateZ(calc(300px / 2));
+}
+#top {
+  background: url(./media/basic-pics/11.jpg) no-repeat center/cover;
+  transform: rotateX(-270deg) translateY(calc(-1 * (300px / 2)));
+  transform-origin: top center;
+}
+#bottom {
+  background: url(./media/basic-pics/12.JPG) no-repeat center/cover;
+  transform: rotateX(270deg) translateY(calc(300px / 2));
+  transform-origin: bottom center;
+}
+#right {
+  background: url(./media/basic-pics/13.JPG) no-repeat center/cover;
+  transform: rotatey(-270deg) translatex(calc(300px / 2));
+  transform-origin: top right;
+}
+#left {
+  background: url(./media/basic-pics/14.jpg) no-repeat center/cover;
+  transform: rotatey(270deg) translatex(calc(-1 * (300px / 2)));
+  transform-origin: center left;
+}
+#back {
+  background: url(./media/basic-pics/9.jpg) no-repeat center/cover;
+  transform: rotateY(-180deg) translateZ(calc(300px / 2));
+}
+@keyframes spin {
+  from {
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+@media screen and (max-width: 575px) {
+  .cube {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 385px) {
+  .cube {
+    width: 200px;
+    height: 200px;
+  }
+  .side {
+    width: 200px;
+    height: 200px;
+  }
+  #front {
+    background: url(./media/basic-pics/10.JPG) no-repeat center/cover;
+    transform: translateZ(calc(200px / 2));
+  }
+  #top {
+    background: url(./media/basic-pics/11.jpg) no-repeat center/cover;
+    transform: rotateX(-270deg) translateY(calc(-1 * (200px / 2)));
+    transform-origin: top center;
+  }
+  #bottom {
+    background: url(./media/basic-pics/12.JPG) no-repeat center/cover;
+    transform: rotateX(270deg) translateY(calc(200px / 2));
+    transform-origin: bottom center;
+  }
+  #right {
+    background: url(./media/basic-pics/13.JPG) no-repeat center/cover;
+    transform: rotatey(-270deg) translatex(calc(200px / 2));
+    transform-origin: top right;
+  }
+  #left {
+    background: url(./media/basic-pics/14.jpg) no-repeat center/cover;
+    transform: rotatey(270deg) translatex(calc(-1 * (200px / 2)));
+    transform-origin: center left;
+  }
+  #back {
+    background: url(./media/basic-pics/9.jpg) no-repeat center/cover;
+    transform: rotateY(-180deg) translateZ(calc(200px / 2));
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
