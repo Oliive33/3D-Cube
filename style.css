@@ -75,6 +75,9 @@ body {
   }
 }
 @media screen and (max-width: 385px) {
+  .title h1 {
+    font-size: 18px;
+  }
   .cube {
     width: 200px;
     height: 200px;
